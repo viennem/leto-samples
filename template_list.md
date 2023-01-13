@@ -66,7 +66,7 @@ Composants de CI :
 
 Aucun template de composants de CI nécessaire.
 
-<details><summary>Incertitude précédente levée</summary>
+<details><summary>[Résolu] Incertitude</summary>
 
 As-t-on besoin de templates de CI ? => cela va dépendre du fonctionnement des composants dans le plugin Jenkinator
 
