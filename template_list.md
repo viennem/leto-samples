@@ -4,8 +4,8 @@ Voici des exemples de templates qui pourraient servir pour l'équipe **ACID**.
 
 Les templates sont rangés selon **trois catégories** :
 
-1. **Templates de projets :** qui peuvent servir de base pour créer un nouveau projet.
-2. **Templates de modèles :** qui peuvent servir de base pour créer un nouveau modèle (pipeline ou infra).
+1. **Templates de projet :** qui peuvent servir de base pour créer un nouveau projet.
+2. **Templates de modèle :** qui peuvent servir de base pour créer un nouveau modèle (pipeline ou infra).
 3. **Templates de composants :** qui peuvent être ajoutés dans un modèle existant (pipeline ou infra).
 
 ## 1. Templates de projet
@@ -19,7 +19,7 @@ Les templates sont rangés selon **trois catégories** :
 3. Projet Terraform+Ansible+Jenkins - **Python**
 4. Projet Terraform+Ansible+Jenkins - **.NET**
 
-Qid des projets avec plus d'un microservices ?
+Qid des projet avec plus d'un microservices ?
 
 ### Projet Kubernetes+Docker+Jenkins
 
@@ -29,7 +29,7 @@ Qid des projets avec plus d'un microservices ?
 3. Projet Kubernetes+Docker+Jenkins - **Python**
 4. Projet Kubernetes+Docker+Jenkins - **.NET**
 
-## 2. Templates de modèles
+## 2. Templates de modèle
 
 ### Pipelines
 
@@ -64,7 +64,11 @@ Composants de CI :
 
 ![](https://github.com/viennem/demo-k8s/raw/main/img/ci-bricks.png)
 
-**Incertitude :** as-t-on besoin de templates de CI ? => cela va dépendre du fonctionnement des composants dans le plugin Jenkinator :
+Aucun template de composants de CI nécessaire.
+
+<details><summary>Incertitude précédente levée</summary>
+
+As-t-on besoin de templates de CI ? => cela va dépendre du fonctionnement des composants dans le plugin Jenkinator
 
 - Si les composants comme "Build / Test" sont spécifiques (avec un composant différent par language), alors il n'y aura pas besoin de templates de CI.
 - Si les composants sont génériques (exemple : un seul composant "Build / Test" générique), alors on aura besoin de templates pour décliner les composants génériques en templates spécifiques par langauge, exemple :
@@ -74,6 +78,11 @@ Composants de CI :
   4. **"Build / Test - .NET"** : Composant "Build / Test" pré-configuré avec les commandes pour builder une application .NET.
   5. Idem pour **"Sonar Analysis"** décliné en languages (Java et JavaScript seulemment) ?
   6. Idem pour **"Automatic Version Retrieval"** décliné en languages  (Java et JavaScript seulemment)  ?
+
+**Réponse :** Les composants seront spécifiques, donc il n'y aura pas besoin de templates,
+car cela permettra de simplifier la configuration des attributs des composants au lieu d'avoir des noms d'attributs génériques.
+
+</details>
 
 <details><summary>Autres questions en dehors des templates</summary>
 
@@ -88,7 +97,7 @@ Composants de CD :
 
 ![](https://github.com/viennem/demo-k8s/raw/main/img/cd-bricks.png)
 
-Aucun template de CD nécessaire.
+Aucun template de composants de CD nécessaire.
 
 ### Infrastructure
 
