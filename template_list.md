@@ -182,3 +182,5 @@ Questions :
    <details><summary>Afficher</summary><img src="./img/statefullset.png" /></details>
 3. **"CronJob++"** : `CronJob` + `PersistentVolumeClaim` + `ConfigMap` + `Secret`.
    <details><summary>Afficher</summary><img src="./img/cronjob.png" /></details>
+4. **"Deployment++ - DR"** : `Deployment` + `Service` + `Ingress` + `PersistentVolumeClaim` + `ConfigMap` + `Secret` + `HorizontalPodAutoscaler` - configuré avec affinity pour garantir le scheduling des pods sur différents noeuds.
+5. **"StatefullSet++ - DR"** : `StatefullSet` + `Service` + `Ingress` + `PersistentVolumeClaim` + `ConfigMap` + `Secret` + `HorizontalPodAutoscaler` - configuré avec affinity pour garantir le scheduling des pods sur différents noeuds.
