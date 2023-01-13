@@ -117,8 +117,9 @@ Aucun template de composants de CD nécessaire.
    <details><summary>Afficher</summary><img src="./img/postgres_cluster.svg" /></details>
 6. ~~"DNS Alias" : Alias DNS avec zone DNS.~~
    <details><summary>Afficher</summary><img src="./img/dns.png" /></details>
-7. **"Security Group"** : Security group avec règles HTTPS+SSH+~~ICMP~~. **TODO :** creéer d'autres templates de security groups avec des règles différentes (exmple : `SMTP`).
+7. **"Security Group"** : Security group avec règles HTTPS+SSH+~~ICMP~~.
    <details><summary>Afficher</summary><img src="./img/secgroup.svg" /></details>
+   **TODO :** créer d'autres templates de security groups avec des règles différentes (exmple : `SMTP`).
 8. **"SLB Load-Balancer"** : Load-balancer et sous-composants.
    <details><summary>Afficher</summary><img src="./img/slb.png" /></details>
 9. **"Traffic Manager"** : Traffic manager et deux load-balancers (multi-az ou multi-régions).
