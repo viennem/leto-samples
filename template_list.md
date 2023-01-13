@@ -185,6 +185,6 @@ Questions :
 4. **"Deployment++ - DR"** : `Deployment` + `Service` + `Ingress` + `PersistentVolumeClaim` + `ConfigMap` + `Secret` + `HorizontalPodAutoscaler` - configuré avec affinity pour garantir le scheduling des pods sur différents noeuds.
 5. **"StatefullSet++ - DR"** : `StatefullSet` + `Service` + `Ingress` + `PersistentVolumeClaim` + `ConfigMap` + `Secret` + `HorizontalPodAutoscaler` - configuré avec affinity pour garantir le scheduling des pods sur différents noeuds.
 
-**TODO :** Ajouter un composant volume séparé pour permettre d'ajouter/supprimer facilement une `ConfigMap`, un `Secret`, ou un `PersistentVolumeClaim` à un `Pod`.
+**TODO :** Ajouter un composant `Volume` séparé pour permettre d'ajouter/supprimer facilement une `ConfigMap`, un `Secret`, ou un `PersistentVolumeClaim` à un `Pod`.
 
 - **difficulté d'implémentation :** les volumes sont configurés à plusieurs endroits dans un `Pod` : [volumes](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#volumes) et [containers.volumeMounts](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#volumes-1).
