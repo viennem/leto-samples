@@ -84,10 +84,12 @@ car cela permettra de simplifier la configuration des attributs des composants a
 
 </details>
 
-<details><summary><b>Autres questions en dehors des templates</b></summary>
+<details><summary><b>[Résolu] Autres questions en dehors des templates</b></summary>
 
 - Attribut language au niveau du composant pipeline, ou au niveau de chaque composant (Build/Test, Version Retrival, Sonar Analysis) ?
     - Qid des pipelines multi-languages ?
+
+**Réponse :** Pour permettre d'avoir un pipeline flexible (multi-language), le paramètre indiquant le nom du langage de programmation sera dupliqué dans les composants "Version retrieval" et "Sonar Analysis".
 
 </details>
 
