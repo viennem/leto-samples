@@ -66,7 +66,7 @@ Composants de CI :
 
 Aucun template de composants de CI nécessaire.
 
-<details><summary>**[Résolu] Incertitude**</summary>
+<details><summary><b>[Résolu] Incertitude</b></summary>
 
 As-t-on besoin de templates de CI ? => cela va dépendre du fonctionnement des composants dans le plugin Jenkinator
 
@@ -84,7 +84,7 @@ car cela permettra de simplifier la configuration des attributs des composants a
 
 </details>
 
-<details><summary>**Autres questions en dehors des templates**</summary>
+<details><summary><b>Autres questions en dehors des templates</b></summary>
 
 - Attribut language au niveau du composant pipeline, ou au niveau de chaque composant (Build/Test, Version Retrival, Sonar Analysis) ?
     - Qid des pipelines multi-languages ?
