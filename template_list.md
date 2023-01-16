@@ -12,6 +12,21 @@ Les templates sont rangés selon **trois catégories** :
 
 ### Projet Terraform+Ansible+Jenkins
 
+- Terraform+Ansible+Jenkins
+- Kubernetes+Docker+Jenkins
+- Terraform+Ansible+GitHubActions
+- Kubernetes+Docker+GitHubActions
+
+- Ansible+Jenkins
+- Terraform+Jenkins
+- Ansible+GitHubActions
+- Terraform+GitHubActions
+
+- Jenkins
+- GitHubActions
+
+Language?
+
 1. Projet Terraform+Ansible+Jenkins - **Java**
     - Exemple : https://github.com/viennem/demo-iac-gitops
 2. Projet Terraform+Ansible+Jenkins - **JavaScript**
@@ -119,7 +134,7 @@ Aucun template de composants de CD nécessaire.
    <details><summary>Afficher</summary><img src="./img/dns.png" /></details>
 7. **"Security Group"** : Security group avec règles HTTPS+SSH+~~ICMP~~.
    <details><summary>Afficher</summary><img src="./img/secgroup.svg" /></details>
-   <b>TODO :</b> créer d'autres templates de security groups avec des règles différentes (exmple : `SMTP`).
+   <b>TODO :</b> créer d'autres templates de security groups avec des règles différentes (exmple : <code>SMTP</code>).
 8. **"SLB Load-Balancer"** : Load-balancer et sous-composants.
    <details><summary>Afficher</summary><img src="./img/slb.png" /></details>
 9. **"Traffic Manager"** : Traffic manager et deux load-balancers (multi-az ou multi-régions).
