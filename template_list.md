@@ -12,29 +12,25 @@ Les templates sont rangés selon **trois catégories** :
 
 ### Projet Terraform+Ansible+Jenkins
 
-- Terraform+Ansible+Jenkins
-- Kubernetes+Docker+Jenkins
-- Terraform+Ansible+GitHubActions
-- Kubernetes+Docker+GitHubActions
+1. Jenkins+Terraform+Ansible
+2. Jenkins+Kubernetes+Docker
+3. GitHubActions+Terraform+Ansible
+4. GitHubActions+Kubernetes+Docker
 
-- Ansible+Jenkins
-- Terraform+Jenkins
-- Ansible+GitHubActions
-- Terraform+GitHubActions
+5. Jenkins+Ansible
+6. Jenkins+Terraform
+7. GitHubActions+Ansible
+8. GitHubActions+Terraform
 
-- Jenkins
-- GitHubActions
+9. Jenkins
+10. GitHubActions
 
-Language?
+Les templates de projet ne permettent de créer qu'un seul microservice (pour éviter d'avoir un grand nombre de templates avec toutes les combinaisons possibles).
+Si on souhaite avoir plusieurs microservices, il faut les ajouter après la création du projet en ajoutant des modèles dans la vue d'index du projet.
+Il faudra voir si on pourrait améliorer cela plus tard, par exemple :
 
-1. Projet Terraform+Ansible+Jenkins - **Java**
-    - Exemple : https://github.com/viennem/demo-iac-gitops
-2. Projet Terraform+Ansible+Jenkins - **JavaScript**
-    - Exemple : https://github.com/viennem/demo-iac-gitops
-3. Projet Terraform+Ansible+Jenkins - **Python**
-4. Projet Terraform+Ansible+Jenkins - **.NET**
-
-Qid des projet avec plus d'un microservices ?
+* pouvoir sélectionner plusieurs templates de projets et les combiner, mais cette approche a ses limitations, car dans le cas d'un projet Terraform, on peut vouloir un pipeline de CI par microservice, et un seul pipeline de CD et une seule infra Terraform globale.
+* avoir un système de templates dynamiques, avec par exemple un système de variables et de templating qui permettraient d'indiquer le nombre de microservices désiré.
 
 ### Projet Kubernetes+Docker+Jenkins
 
@@ -51,21 +47,33 @@ Qid des projet avec plus d'un microservices ?
 #### CI (Jenkins)
 
 1. **"Java CI"** : Pipeline de CI pour builder une application Java.
-2. **"JavaScript CI"** : Pipeline de CI pour builder une application JavaScript.
-3. **"Python CI"** : Pipeline de CI pour builder une application Python.
-4. **".NET CI"** : Pipeline de CI pour builder une application .NET.
+2. **"JavaScript CI - NPM"** : Pipeline de CI pour builder une application JavaScript avec NPM.
+3. **"JavaScript CI - Yarn"** : Pipeline de CI pour builder une application JavaScript Yarn.
+4. **"Python CI"** : Pipeline de CI pour builder une application Python.
+5. **".NET CI"** : Pipeline de CI pour builder une application .NET.
 
-SonarQube ?
+SonarQube serait utilisé par défaut dans chacun de ces templates de CI.
+Si on ne veux pas l'utiliser, il suffirait de supprimer le composant Sonar dans la vue modèle, après avoir instancié le template.
 
 #### CD (Jenkins)
 
 1. **"Terraform CD"** : Pipeline de CD pour déployer sur Terraform.
 2. **"Kubernetes CD"** : Pipeline de CD pour déployer sur Kubernetes.
-2. **"Kubernetes CD + Vault integration"** : Pipeline de CD pour déployer sur Kubernetes en injectant des secrets Vault.
+3. **"Kubernetes CD + Vault integration"** : Pipeline de CD pour déployer sur Kubernetes en injectant des secrets Vault.
+4. **Kuberneted CD + Helm** : Pipeline de CD pour déployer sur Kubernetes avec Helm.
+5. **Kuberneted CD + Helm + Vault integration** : Pipeline de CD pour déployer sur Kubernetes avec Helm, en injectant des secrets Vault.
 
 ### Infrastructure
 
 #### Terraform
+
+- Single AZ
+- Multi AZ (actif actif)
+- Multi AZ (actif passif)
+- Multi-region
+- BDD Postgres
+- BDD Oracle
+- Message queue
 
 #### Kubernetes
 
