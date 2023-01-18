@@ -29,8 +29,10 @@ Les templates de projet ne permettent de créer qu'un seul microservice (pour é
 Si on souhaite avoir plusieurs microservices, il faut les ajouter après la création du projet en ajoutant des modèles dans la vue d'index du projet.
 Il faudra voir si on pourrait améliorer cela plus tard, par exemple :
 
-* pouvoir sélectionner plusieurs templates de projets et les combiner, mais cette approche a ses limitations, car dans le cas d'un projet Terraform, on peut vouloir un pipeline de CI par microservice, et un seul pipeline de CD et une seule infra Terraform globale.
+* pouvoir sélectionner plusieurs templates de projet et les combiner, mais cette approche a ses limitations, car dans le cas d'un projet Terraform, on peut vouloir un pipeline de CI par microservice, et un seul pipeline de CD et une seule infra Terraform globale.
 * avoir un système de templates dynamiques, avec par exemple un système de variables et de templating qui permettraient d'indiquer le nombre de microservices désiré.
+
+De plus, il n'est pas possible de sélectionner le langage de notre application pour le build dans le pipeline de CI dans cette liste de templates de projets, car on aurait encore un fois un trop grand nombre de combinaisons possibles. Cela signifie que le pipeline de CI ne pourra pas être pré-configuré avec les commandes pour builder l'application dans le langage spécifique.
 
 ### Projet Kubernetes+Docker+Jenkins
 
